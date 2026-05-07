@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SimpleBooksAPI Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="API Tests(failed)">
+    <classes>
+      <class name="tests.StatusTest">
+        <methods>
+          <include name="setup"/>
+          <include name="checkAPIStatus"/>
+        </methods>
+      </class> <!-- tests.StatusTest -->
+      <class name="tests.BooksTest">
+        <methods>
+          <include name="setup"/>
+          <include name="getAllBooks"/>
+          <include name="getBooksWithQueryParams"/>
+          <include name="getSingleBook"/>
+        </methods>
+      </class> <!-- tests.BooksTest -->
+      <class name="tests.NegativeTestCases">
+        <methods>
+          <include name="setup"/>
+          <include name="getOrderInvalidId"/>
+          <include name="deleteAlreadyDeletedOrder"/>
+          <include name="createOrderWithoutToken"/>
+        </methods>
+      </class> <!-- tests.NegativeTestCases -->
+      <class name="tests.OrdersTest">
+        <methods>
+          <include name="setup"/>
+          <include name="updateOrder_PATCH"/>
+          <include name="createOrder"/>
+          <include name="getSingleOrder"/>
+          <include name="deleteOrder"/>
+          <include name="getAllOrders"/>
+        </methods>
+      </class> <!-- tests.OrdersTest -->
+      <class name="tests.GenerateTokenTest">
+        <methods>
+          <include name="setup"/>
+          <include name="generateToken"/>
+        </methods>
+      </class> <!-- tests.GenerateTokenTest -->
+    </classes>
+  </test> <!-- API Tests(failed) -->
+</suite> <!-- Failed suite [SimpleBooksAPI Suite] -->
